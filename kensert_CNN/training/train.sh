@@ -1,5 +1,14 @@
 #!/bin/bash -e
 
+checkpoint=$4
+
+if [[ "$checkpoint" ]]; then
+    echo Checkpointing...
+    mkdir -p /home/output/kensert_CNN
+    touch /home/output/kensert_CNN/predictions_bbbc014
+    exit 0
+fi
+
 ### training script
 echo $WORKFLOW_NAME
 echo $0 $1 $2

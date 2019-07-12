@@ -1,5 +1,14 @@
 #!/bin/bash -e
 
+checkpoint=$4
+echo $4
+if [[ "$checkpoint" ]]; then
+    echo Checkpointing...
+    mkdir -p /home/output/
+    touch /home/output/bbbc014_labels.npy
+    exit 0
+fi
+
 ### preprocessing script
 
 # 1 - ingestion

@@ -2,7 +2,7 @@
 
 checkpoint=$4
 echo $4
-if [[ "$checkpoint" ]]; then
+if [[ "$checkpoint" == "true" ]]; then
     echo Checkpointing...
     mkdir -p /home/output/
     touch /home/output/bbbc014_labels.npy

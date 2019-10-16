@@ -1,4 +1,4 @@
-FROM pharmbio/kensert_cnn_base:latest
+FROM pharmbio/kensert-cnn-base:latest
 
 WORKDIR /home
 

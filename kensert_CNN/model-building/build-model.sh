@@ -1,7 +1,6 @@
 #!/bin/sh -e
 ### model building script
 
-# test run docker build
 cd /home
-docker build --rm -t snapple49/pipelines-kensert-serving:test .
-docker push snapple49/pipelines-kensert-serving:test
+docker build --rm -t ${MODEL_REPO}/pipelines-kensert-serving:test .
+docker push ${MODEL_REPO}/pipelines-kensert-serving:test

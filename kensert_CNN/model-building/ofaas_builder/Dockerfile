@@ -11,11 +11,11 @@ RUN chmod +x /usr/bin/fwatchdog && \
 
 ADD index.py .
 ADD function ./function
-ADD models/saved_model.h5 ./function/predict_api/saved_model.h5
+ADD models/*.h5 ./function/predict_api/
 
 ENV fprocess="python3 index.py"
-ENV read_timeout=20
-ENV write_timeout=60
+ENV read_timeout=120
+ENV write_timeout=120
 
 EXPOSE 8080
 

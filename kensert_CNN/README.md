@@ -1,5 +1,5 @@
 # CNN example pipeline
-This is an example pipeline based on an article from A. Kensert, with the code available at https://github.com/pharmbio/kensert_CNN/tree/model-serving
+This is an example pipeline based on a machine learning model from A. Kensert, with the code available at https://github.com/pharmbio/kensert_CNN/tree/model-serving
 
 ## Pipeline description
 The pipeline consists of 4 different stages; data preparation, training, model evaluation and packaging for model serving. Each stage is built as a container, with all Dockerfiles and related bash scripts available in the subfolders. In short, the original machine learning code is treated as a black box and the shell scripts in the Docker containers prepare files and execute the python code as-is from the source repo. At the final stage, a Docker image with the resulting trained model packaged as a servable function with OpenFaaS is created and pushed to a target repository, which the user defines when running the pipeline.
